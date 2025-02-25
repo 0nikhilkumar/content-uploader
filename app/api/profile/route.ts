@@ -3,7 +3,7 @@ import { connectToDatabase } from "@/lib/db";
 import User from "@/models/User";
 import { getServerSession } from "next-auth";
 import { NextRequest, NextResponse } from "next/server";
-import { imagekit } from "../imagekit-auth/route";
+import { imagekit } from "@/lib/imagekit";
 
 export async function GET() {
     const session = await getServerSession(authOptions);

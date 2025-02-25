@@ -3,7 +3,7 @@ import { getServerSession } from "next-auth/next";
 import { connectToDatabase } from "@/lib/db";
 import Video, { IVideo } from "@/models/Video";
 import { authOptions } from "@/lib/authOption";
-import { imagekit } from "../imagekit-auth/route";
+import { imagekit } from "@/lib/imagekit";
 
 export async function GET() {
   try {
