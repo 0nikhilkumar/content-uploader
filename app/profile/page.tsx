@@ -95,6 +95,7 @@ function Profile() {
 									width={150}
 									height={150}
 									loading="lazy"
+                                    priority={true}
 								/>
 							) : (
 								<img

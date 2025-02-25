@@ -92,6 +92,7 @@ export default function VideoComponent({ video }: { video: IVideo }) {
 								width={500}
 								height={500}
 								className="w-full h-full object-cover"
+                                priority={true}
 							/>
 						)}
 					</div>
