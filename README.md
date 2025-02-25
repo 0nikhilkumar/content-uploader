@@ -20,7 +20,6 @@ This repository contains a Next.js application that enables to upload content fo
 ### Prerequisites
 
 - Node.js installed on your machine.
-- A Google Maps API key.
 
 ### Installation
 
