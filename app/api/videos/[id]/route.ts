@@ -1,13 +1,12 @@
 import { connectToDatabase } from "@/lib/db";
 import Video from "@/models/Video";
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 
-export async function GET(request: NextRequest) {
+export async function GET({params}: {params: {id: string}}) {
 	try {
 		await connectToDatabase();
-        const url = new URL(request.url);
-        const id = url.searchParams.get("id");
-		const video = await Video.findById(id).lean();
+
+		const video = await Video.findById(params.id).lean();
 
 		if (!video) {
 			return NextResponse.json({ error: "Video not found" }, { status: 404 });
