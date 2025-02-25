@@ -11,7 +11,6 @@ export async function GET({params}: {params: {id: string}}) {
 		if (!video) {
 			return NextResponse.json({ error: "Video not found" }, { status: 404 });
 		}
-
 		return NextResponse.json(video);
 	} catch (error) {
 		console.error("Error fetching video:", error);
